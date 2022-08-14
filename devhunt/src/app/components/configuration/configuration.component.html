@@ -1,0 +1,180 @@
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+    <div class="main-panel" id="main-panel">
+        <app-navbar [entete]="entete"></app-navbar>
+        <!--  CONTENT -->
+        <div class="panel-header panel-header-sm">
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card card-chart">
+                        <div class="card-header">
+                            <h5 class="card-category">pFsense Serveur</h5>
+                            <h4 class="card-title">CONFIGURATION DE PFSENSE</h4>
+                            <div class="dropdown">
+                                <button type="button"
+                                    class="btn btn-round btn-outline-default dropdown-toggle btn-simple btn-icon no-caret"
+                                    data-toggle="dropdown">
+                                    <i class="now-ui-icons loader_gear"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">Configurer</a>
+                                    <a class="dropdown-item" href="#">Redemmarer</a>
+                                    <a class="dropdown-item" href="#">Suspendre</a>
+                                    <a class="dropdown-item text-danger" href="#">Arreter</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-area">
+                               <img src="../../../assets/img/pf.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-chart">
+                        <div class="card-header">
+                            <h5 class="card-category">Reseaux</h5>
+                            <h4 class="card-title">LAN et WAN</h4>
+                            <div class="dropdown">
+                                <button type="button"
+                                    class="btn btn-round btn-outline-default dropdown-toggle btn-simple btn-icon no-caret"
+                                    data-toggle="dropdown">
+                                    <i class="now-ui-icons loader_gear"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#"> Adresse IP </a>
+                                    <a class="dropdown-item" href="#">Adresse MAC</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-area">
+                               <img src="../../../assets/img/lan.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-chart">
+                        <div class="card-header">
+                            <h5 class="card-category">LOGs</h5>
+                            <h4 class="card-title">LOG</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-area">
+                               <img src="../../../assets/img/log.jpg" alt="" height="170px" width="320px">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <i class="now-ui-icons ui-2_time-alarm"></i> Last 7 days
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-category">Connexion</h5>
+                            <h4 class="card-title"> LISTE DES UTILISATEURS CONNECTES</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table text-center">
+                                    <thead class=" text-primary">
+                                        <tr>
+                                        <th>
+                                            Adresse IP
+                                        </th>
+                                        <th>
+                                            Nom d'utilisateur
+                                        </th>
+                                        <th>
+                                            Debut de la session
+                                        </th>
+                                        <th>
+                                            Fin de la session
+                                        </th>
+                                        <th>
+                                            Debit
+                                        </th>
+                                        <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td>
+                                            192.168.25.33
+                                        </td>
+                                        <td>
+                                            Ando
+                                        </td>
+                                        <td>
+                                            2022-08-14 22:30:01
+                                        </td>
+                                        <td >
+                                            2022-08-14 23:30:01
+                                        </td>
+                                        <td>1024 kbps</td>
+                                        <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral"
+                                                data-original-title="Edit Task">
+                                                <i class="now-ui-icons ui-2_settings-90"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral"
+                                                data-original-title="Remove">
+                                                <i class="now-ui-icons ui-1_simple-remove"></i>
+                                            </button>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                192.168.25.11
+                                            </td>
+                                            <td>
+                                                Nelly
+                                            </td>
+                                            <td>
+                                                2022-08-14 22:24:34
+                                            </td>
+                                            <td>
+                                                2022-08-14 23:24:34
+                                            </td>
+                                            <td>1024 kbps</td>
+                                            <td class="td-actions text-right">
+                                                <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral"
+                                                    data-original-title="Edit Task">
+                                                    <i class="now-ui-icons ui-2_settings-90"></i>
+                                                </button>
+                                                <button type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral"
+                                                    data-original-title="Remove">
+                                                    <i class="now-ui-icons ui-1_simple-remove"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>

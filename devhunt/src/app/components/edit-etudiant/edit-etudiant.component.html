@@ -1,0 +1,78 @@
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+    <div class="main-panel" id="main-panel">
+        <app-navbar [entete]="entete"></app-navbar>
+        <div class="panel-header panel-header-lg">
+            <canvas id="bigDashboardChart"></canvas>
+        </div>
+        <div class="content" style="margin-top: -300px;">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div @fade class="card">
+                        <div class="card-header">
+                            <h5 class="title">Edit etudiant</h5>
+                        </div>
+                        <div class="card-body">
+                            <form [formGroup]="editForm" (ngSubmit)="onSubmitEditForm()">
+                                <div class="row">
+                                    <div class="col-md-12 pr-1">
+                                        <div class="form-group">
+                                            <label>Niveau ()</label>
+                                            <input type="text" formControlName="et_niveau" class="form-control"
+                                                readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 pr-1">
+                                        <div class="form-group">
+                                            <label>Nom</label>
+                                            <input type="text" formControlName="et_nom" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 pl-1">
+                                        <div class="form-group">
+                                            <label>Prenom</label>
+                                            <input type="text" formControlName="et_prenom" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Matricule</label>
+                                            <input type="text" formControlName="et_num" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 pr-1">
+                                        <div class="form-group">
+                                            <label>Parcours</label>
+                                            <input type="text" formControlName="et_parcours" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="submit" class="form-control btn btn-primary"
+                                            [disabled]="editForm.invalid">Enregistrer</button>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="reset" class="form-control btn btn-danger">Effacer</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>

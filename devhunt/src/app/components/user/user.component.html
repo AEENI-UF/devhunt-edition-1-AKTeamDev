@@ -1,0 +1,70 @@
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+    <div class="main-panel" id="main-panel">
+        <app-navbar [entete]="entete"></app-navbar>
+        <div class="panel-header panel-header-lg">
+            <canvas id="bigDashboardChart"></canvas>
+        </div>
+        <div class="content" style="margin-top: -250px;">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div @fade class="card  card-tasks">
+                        <div class="card-header ">
+                            <h5 class="card-category">Liste des Utilisateurs</h5>
+                            <h2 class="card-title"> <i class="now-ui-icons users_circle-08"></i> UTILISATEURS</h2>
+                            <a [routerLink]="['/devhunt/akteamdev/users/add']" routerLinkActive="router-link-active"  type="button" class="btn btn-round btn-outline-success  btn-simple btn-icon no-caret" style="float: right; margin-top: -50px;">
+                                <i class="now-ui-icons ui-1_simple-add"></i>
+                            </a>
+                        </div>
+                        <div class="card-body ">
+                            <div class="table-full-width table-responsive">
+                                <table class="table">
+                                    <tbody>
+                                        <tr *ngFor="let u of users">
+                                            <td>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="checkbox" checked>
+                                                        <span class="form-check-sign"></span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td class="text-left">
+                                                {{u.super_user | uppercase}}
+                                            </td>
+                                            <td class="text-right">
+                                                {{convertDateShow(u.created_at)}}
+                                            </td>
+                                            <td class="td-actions text-right">
+                                                <a [routerLink]="['/devhunt/akteamdev/users', u.id ,'update']" routerLinkActive="router-link-active"  type="button" rel="tooltip" title=""
+                                                    class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral"
+                                                    data-original-title="Edit Task">
+                                                    <i class="now-ui-icons ui-2_settings-90"></i>
+                                                </a>
+                                                <button type="button" rel="tooltip" title=""
+                                                    class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" (click)="supprimer(u.id)"
+                                                    onclick="nowuiDashboard.showNotification('top','right', 'Attention, vous etes sur le point de supprimer un utilisateur!', 'primary')"
+                                                    data-original-title="Remove">
+                                                    <i class="now-ui-icons ui-1_simple-remove"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer ">
+                            <hr>
+                            <div class="stats">
+                                <i class="now-ui-icons loader_refresh spin"></i> Updated 3 minutes ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+.alert-log {
+    height: 50px;
+}
+
+.in-uname {
+    text-align: center;
+}
+
+.in-pass {
+    text-align: center;
+}
+
+  .alert-login{
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    visibility: hidden;
+    color: #f44336;
+  }
+
+.own-input {
+    border-radius: 50px;
+}
+
+.own-input:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}

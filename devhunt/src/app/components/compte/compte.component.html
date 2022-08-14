@@ -1,0 +1,65 @@
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+    <div class="main-panel" id="main-panel">
+        <app-navbar [entete]="entete"></app-navbar>
+        <div class="panel-header panel-header-lg">
+            <canvas id="bigDashboardChart"></canvas>
+        </div>
+        <div class="content" style="margin-top: -250px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div @fade class="card">
+                        <div class="card-header">
+                            <h3 class="card-title"> <i class="now-ui-icons objects_key-25"></i> COMPTE D'ACCEES AU RESEAUX WIFI</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" text-primary">
+                                        <tr class=" text-center">
+                                        <th>
+                                            E-MAIL
+                                        </th>
+                                        <th>
+                                            TELEPHONE
+                                        </th>
+                                        <th class="text-right">
+                                            CREATION
+                                        </th>
+                                        <th class="text-right">
+                                            MODIFICATION
+                                        </th>
+                                        <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let c of comptes" class=" text-center">
+                                            <td>
+                                                {{c.mail}}
+                                            </td>
+                                            <td>
+                                                {{c.telephone}}
+                                            </td>
+                                            <td class="text-right">
+                                               {{convertDateShow(c.created_at)}}
+                                            </td>
+                                            <td class="text-right">
+                                                {{convertDateShow(c.updated_at)}}
+                                            </td>
+                                            <td>
+                                                <a [routerLink]="['/devhunt/akteamdev/comptes/', c.id,'update']" routerLinkActive="router-link-active"  class="btn btn-primary btn-simple no-caret btn-round btn-ico"><i class="now-ui-icons arrows-1_refresh-69"></i></a>
+                                                <button class="btn btn-danger btn-simple no-caret  btn-round btn-ico ml-1" (click)="supprimer(c.id)"
+                                                    onclick="nowuiDashboard.showNotification('top','right', 'Attention, vous etes sur le point de supprimer un compte!', 'primary')"><i class="now-ui-icons ui-1_simple-remove"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>

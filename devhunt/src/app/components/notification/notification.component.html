@@ -1,0 +1,106 @@
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+    <div class="main-panel" id="main-panel">
+        <app-navbar [entete]="entete"></app-navbar>
+        <div class="panel-header">
+            <div class="header text-center">
+
+            </div>
+        </div>
+        <div class="content" style="margin-top: -150px;">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">ALERT</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-primary alert-with-icon" data-notify="container">
+                                <button type="button" aria-hidden="true" class="close">
+                                    <i class="now-ui-icons ui-1_simple-remove"></i>
+                                </button>
+                                <span data-notify="icon" class="now-ui-icons ui-1_bell-53"></span>
+                                <span data-notify="message">This is a notification with close button and icon.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">INFORMATION</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-info alert-with-icon" data-notify="container">
+                                <button type="button" aria-hidden="true" class="close">
+                                    <i class="now-ui-icons ui-1_simple-remove"></i>
+                                </button>
+                                <span data-notify="icon" class="now-ui-icons ui-1_bell-53"></span>
+                                <span data-notify="message">This is a notification with close button and icon.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="places-buttons">
+                                <div class="row">
+                                    <div class="col-md-6 ml-auto mr-auto text-center">
+                                        <h4 class="card-title">
+                                            Notifications Places
+                                            <p class="category">Click to view notifications</p>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-8 ml-auto mr-auto">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <button class="btn btn-primary btn-block"
+                                                    onclick="nowuiDashboard.showNotification('top','left')">Top
+                                                    Left</button>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button class="btn btn-primary btn-block"
+                                                    onclick="nowuiDashboard.showNotification('top','center')">Top
+                                                    Center</button>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button class="btn btn-primary btn-block"
+                                                    onclick="nowuiDashboard.showNotification('top','right')">Top
+                                                    Right</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-8 ml-auto mr-auto">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <button class="btn btn-primary btn-block"
+                                                    onclick="nowuiDashboard.showNotification('bottom','left')">Bottom
+                                                    Left</button>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button class="btn btn-primary btn-block"
+                                                    onclick="nowuiDashboard.showNotification('bottom','center')">Bottom
+                                                    Center</button>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button class="btn btn-primary btn-block"
+                                                    onclick="nowuiDashboard.showNotification('bottom','right')">Bottom
+                                                    Right</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>

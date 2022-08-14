@@ -1,0 +1,55 @@
+<div class="" style="background-image: url('../../../assets/img/eni1.jpg'); z-index: -2;">
+    <!--<app-sidebar></app-sidebar>-->
+    <div class="" id="main-panel">
+        <!--<app-navbar></app-navbar>-->
+        <!--  CONTENT -->
+        <div class="panel-header panel-header-sm ">
+        </div>
+        <div class="" style="margin-top: -50px;">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4" style="padding-left: 50px; padding-right: 50px; z-index: 2">
+                    <form [formGroup]="loginForm" (ngSubmit)='onSubmitLogin()' class="card card-user">
+                        <div class="image">
+                            <img src="../assets/img/bg5.jpg" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <div class="author">
+                                <a href="#">
+                                    <img class="avatar border-gray bg-dark" src="../assets/img/u.webp" alt="...">
+                                </a>
+                                <h4 class="description">
+                                    Authentification
+                                </h4>
+                            </div>
+                            <div style="padding: 20px">
+                                <div class="input-group mb-3 in-g-uname">
+                                    <input type="text" id="nom" formControlName="nom" class="form-control text-center"
+                                        placeholder="Username">
+                                </div>
+                                <div class="input-group in-g-pass mb-3">
+                                    <input type="password" id='password' formControlName='password'
+                                        class="form-control text-center" placeholder="Password">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="button-container text-right mr-2 d-flex justify-content-between">
+                            <span id="traitement" class="mt-3 ml-1"></span>
+                            <span>
+                                <button type="submit" class="btn btn-primary " [disabled]="loginForm.invalid">
+                                    Connexion
+                                </button>
+                                <button class="btn btn-danger">
+                                    Annuler
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer bg-dark panel-header" style="margin-top: -90px; z-index: 0;"></footer>
+</div>

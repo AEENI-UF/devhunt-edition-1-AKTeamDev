@@ -1,0 +1,65 @@
+<div class="sidebar bg-blue" data-color="#888">
+    <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+    <div class="logo">
+        <a [routerLink]="['/devhunt/akteamdev/home']" routerLinkActive="router-link-active"  class="simple-text logo-mini">
+            <i class="now-ui-icons business_globe"></i>
+        </a>
+        <a [routerLink]="['/devhunt/akteamdev/home']" routerLinkActive="router-link-active"  class="simple-text logo-normal">
+            POINT D'ACCEES WIFI
+        </a>
+    </div>
+    <div class="sidebar-wrapper" id="sidebar-wrapper">
+        <ul class="nav">
+            <li>
+                <a [routerLink]="['/devhunt/akteamdev/home']" routerLinkActive="router-link-active" >
+                    <i class="now-ui-icons design_app"></i>
+                    <p>Accueil</p>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/devhunt/akteamdev/configurations']" routerLinkActive="router-link-active" >
+                    <i class="now-ui-icons objects_planet"></i>
+                    <p>Configurations</p>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/devhunt/akteamdev/etudiants']" routerLinkActive="router-link-active" >
+                    <i class="now-ui-icons design_bullet-list-67"></i>
+                    <p>Etudiants</p>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/devhunt/akteamdev/comptes']" routerLinkActive="router-link-active" >
+                    <i class="now-ui-icons business_badge"></i>
+                    <p>Comptes</p>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/devhunt/akteamdev/notifications']" routerLinkActive="router-link-active" >
+                    <i class="now-ui-icons ui-1_bell-53"></i>
+                    <p>Notifications</p>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/devhunt/akteamdev/users']" routerLinkActive="router-link-active" >
+                    <i class="now-ui-icons ui-1_lock-circle-open"></i>
+                    <p>Utilisateurs</p>
+                </a>
+            </li>
+            
+            <li>
+                <a >
+                    <p></p>
+                </a>
+            </li>
+            <li class="active-pro">
+                <a (click)="fermerSession()">
+                    <i class="now-ui-icons media-1_button-power"></i>
+                    <p>Fermer session</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
